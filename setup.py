@@ -29,7 +29,7 @@ setup(name='YoullDownload',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'setuptools'
+          'setuptools',
           'pyquery',
       ],
       entry_points={'console_scripts': ['youlldownload = youlldownload:main', ]}
