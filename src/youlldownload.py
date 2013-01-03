@@ -10,7 +10,7 @@ PATTERN = r""".*\@import url\((?P<url>.*?)\).*"""
 from pyquery import PyQuery
 
 def main():
-    if len(sys.argv<1):
+    if len(sys.argv)<1:
         print "Please, provide an URL as parameter"
         sys.exit(1)
 
