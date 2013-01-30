@@ -1,7 +1,7 @@
 Quick info
 ==========
 
-Let say you need to use the http load testing and benchmarking utility `siege`__ of s web page
+Let say you need to use the HTTP load testing and benchmarking utility `siege`__ on a web page
 and you also want to use the ``--internet`` option, to simulate at best the behavior of a web browser.
 
 __ http://www.joedog.org/siege-home/
@@ -23,7 +23,12 @@ Usage
 
 ::
 
-    youlldownload http://host.com/section/page
+    $ youlldownload http://host.com/section/page
+
+Using with siege::
+
+    $ youlldownload http://host.com/section/page > list.txt
+    $ siege -i -f list.txt [other options]
 
 Taken resouces
 --------------
