@@ -34,6 +34,8 @@ def main():
     urls.extend([rebase_url(x.attrib.get('src')) for x in pq('script') if x.attrib.get('src')])
     urls.extend([rebase_url(x.attrib.get('href')) for x in pq('link[rel=stylesheet]') if x.attrib.get('href')])
     urls.extend([rebase_url(x.attrib.get('src')) for x in pq('img') if x.attrib.get('src')])
+    urls.extend([rebase_url(x.attrib.get('data')) for x in pq('object') if x.attrib.get('data')])
+    urls.extend([rebase_url(x.attrib.get('src')) for x in pq('embed') if x.attrib.get('src')])
 
     for element in pq('style'):
         if re.match(PATTERN, element.text, re.IGNORECASE):

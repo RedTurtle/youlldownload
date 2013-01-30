@@ -31,6 +31,8 @@ Taken resouces
 * from ``script`` tags we'll take the ``src`` URL
 * from ``link`` tags with ``rel`` equals to ``stylesheet`` we'll take the ``href`` url
 * from ``img`` tags we'll take the ``src`` URL
+* from ``object`` tags we'll take the ``data`` URL
+* from ``embed`` tags we'll take the ``src`` URL
 * from ``style`` tags we'll take the URL inside if the tag is using an "*@import url*"
   directive
 
