@@ -20,7 +20,10 @@ def main():
 
     pq = PyQuery(url=url)
     
-    base_url = pq('base')[0].attrib.get('href')
+    try:
+        base_url = pq('base')[0].attrib.get('href')
+    except IndexError:
+        base_url = url
     if base_url.endswith('/'):
         base_url = base_url[:-1]
 
@@ -36,6 +39,8 @@ def main():
     urls.extend([rebase_url(x.attrib.get('src')) for x in pq('img') if x.attrib.get('src')])
     urls.extend([rebase_url(x.attrib.get('data')) for x in pq('object') if x.attrib.get('data')])
     urls.extend([rebase_url(x.attrib.get('src')) for x in pq('embed') if x.attrib.get('src')])
+    urls.extend([rebase_url(x.attrib.get('src')) for x in pq('iframe') if x.attrib.get('src')])
+    urls.extend([rebase_url(x.attrib.get('src')) for x in pq('video source') if x.attrib.get('src')])
 
     for element in pq('style'):
         if re.match(PATTERN, element.text, re.IGNORECASE):
@@ -46,8 +51,6 @@ def main():
     
     for url in urls:
         print url
-
-#    print " ".join(urls)   
 
 if __name__ == '__main__':
     main()
