@@ -40,6 +40,8 @@ Taken resouces
 * from ``embed`` tags we'll take the ``src`` URL
 * from ``style`` tags we'll take the URL inside if the tag is using an "*@import url*"
   directive
+* from ``iframe`` tags we'll take the ``src`` URL
+* from ``source`` tags inside ``video`` we'll take the ``src`` URL
 
 Authors
 =======
