@@ -11,6 +11,7 @@ When a web browser load a page, it also load all the resources inside that page:
 * Images
 * JavaScript files
 * CSS
+* Media resources
 
 So you need a list of all URLs taken from that page.
 
