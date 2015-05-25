@@ -10,7 +10,9 @@ Changelog
   [keul]
 - Inspect also resources from CSS (backgroun images, fonts, ...)
   [keul]
-
+- Script was not properly working outside homepage if a "base" tag
+  was not provided
+  [keul]
 
 0.2 (2014-04-02)
 ----------------

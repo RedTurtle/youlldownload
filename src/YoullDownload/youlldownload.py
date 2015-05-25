@@ -24,10 +24,12 @@ def main():
 
     pq = PyQuery(url=url)
     
+    base_urls_parts = urlparse(url)
+    base_url = "%s://%s" % (base_urls_parts.scheme, base_urls_parts.netloc)
     try:
         base_url = pq('base')[0].attrib.get('href')
     except IndexError:
-        base_url = url
+        pass
     if base_url.endswith('/'):
         base_url = base_url[:-1]
 
@@ -51,8 +53,10 @@ def main():
                     continue
                 if inner_url.startswith('../'):
                     inner_url = "/".join(url.split('/')[:-1]) + '/' + inner_url
+                elif inner_url.startswith('/'):
+                    inner_url = inner_url
                 elif not inner_url.startswith('http'):
-                    inner_url = url + '/' + inner_url
+                    inner_url = url + '/../' + inner_url
                 results.append(inner_url)
         return results
  
