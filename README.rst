@@ -44,6 +44,9 @@ Taken resouces
 * from ``iframe`` tags we'll take the ``src`` URL
 * from ``source`` tags inside ``video`` we'll take the ``src`` URL
 
+Also: CSS sources are deeply analyzed for found additional resources inside them
+(like background images, fonts, ...).
+
 Authors
 =======
 

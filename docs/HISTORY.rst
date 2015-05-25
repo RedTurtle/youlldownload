@@ -4,7 +4,12 @@ Changelog
 0.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Remove duplicated URLs from final report
+  [keul] 
+- Do not include same version of an URL with anchors
+  [keul]
+- Inspect also resources from CSS (backgroun images, fonts, ...)
+  [keul]
 
 
 0.2 (2014-04-02)
