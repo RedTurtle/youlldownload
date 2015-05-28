@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3 (unreleased)
+0.3 (2015-05-28)
 ----------------
 
 - Remove duplicated URLs from final report

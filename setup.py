@@ -5,7 +5,7 @@ import sys, os
 
 setup(name='YoullDownload',
       # scripts=['src/youlldownload.py',],
-      version='0.3.dev0',
+      version='0.3',
       description="Grab from a remote site page all resources that a browser "
                   "will probably download visiting the page",
       long_description=open("README.rst").read() + "\n" +
