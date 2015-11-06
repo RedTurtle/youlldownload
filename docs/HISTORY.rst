@@ -4,14 +4,15 @@ Changelog
 0.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fix setup.py to properly create a package
+  [ale-rt]
 
 
 0.3 (2015-05-28)
 ----------------
 
 - Remove duplicated URLs from final report
-  [keul] 
+  [keul]
 - Do not include same version of an URL with anchors
   [keul]
 - Inspect also resources from CSS (backgroun images, fonts, ...)
